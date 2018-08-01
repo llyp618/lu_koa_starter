@@ -1,0 +1,15 @@
+{
+  "apps" : [{
+    "name"        : "ZHFY",
+    "script"      : "./bin/www",
+    "args"        : ["--env=production"],
+    "node_args"   : "--harmony",
+    "log_date_format": "YYYY-MM-DD HH:mm",
+    "error_file": "log/error.log", 
+    "out_file"	: "/dev/null", 
+    "env": {
+        "NODE_ENV": "production",
+        "PORT": 6868
+    }
+  }]
+}
