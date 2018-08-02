@@ -5,6 +5,7 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const helmet = require('koa-helmet')
 const session = require('koa-session')
+const favicon = require('koa-favicon')
 const config = require('../config')
 
 
@@ -35,6 +36,8 @@ if(config.env === 'development') {
 // 404
 app.use(require('./middlewares/notFound'))
 
+// fav
+app.use(favicon(config.publicPath + '/img/favicon.ico'))
 // 静态资源
 app.use(require('koa-static')(config.publicPath))
 
